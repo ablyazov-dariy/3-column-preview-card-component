@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* code */
+
+body {
+    background: #c3c3fc;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    width: min(100% - 2rem , 960px);
+    margin-inline: auto;
+    margin-block: 2rem;
+    border-radius: .7rem;
+    overflow: clip;
+    max-width: 360px;
+}
+
+.card {
+    padding: 3rem;
+    background: var(--bg-color);
+    color: mintcream;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.card h2 {
+    font-family: "Big Shoulders Display", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+}
+.card p {
+    font-weight: 400;
+    flex: 1 1 auto;
+}
+
+.card button {
+    color: var(--bg-color);
+    background:  hsl(0, 0%, 95%);
+    border: transparent;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 10000px;
+    max-width: fit-content;
+    transition: all 100ms;
+}
+.card button:hover {
+    background: var(--bg-color);
+    color:  hsl(0, 0%, 95%);
+    outline: 1px solid hsl(0, 0%, 95%);
+}
+
+@media (min-width: 800px) {
+    .wrap {
+        max-width: unset;
+        display: flex;
+    }
+
+    .card {
+        min-height: 500px;
+    }
+}
